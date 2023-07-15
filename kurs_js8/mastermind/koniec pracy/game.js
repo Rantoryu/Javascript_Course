@@ -28,7 +28,6 @@ for (let i = 0; i < 8; i++) {
 
 function guess(evt) {
 
-    // alert(evt.currentTarget.color);
 
     if (active_pill >=0 && active_pill <= 4) {
 
@@ -48,7 +47,6 @@ function checkBoard() {
     startBoard();
     drawArrow();
 
-    // Rysuj ostatnią próbę
     for (let i = 0; i < 5; i++) {
         drawPill(100 + i * 100, 250, state[i]);
     }
@@ -56,7 +54,6 @@ function checkBoard() {
     ctx.fillStyle = "black";
     ctx.fillRect(100, 350, 480, 80);
 
-    // Oceń ostatnią próbę
     for (let i = 0; i < 5; i++) {
 
         if (state[i] == solution[i]) {
@@ -73,8 +70,6 @@ function checkBoard() {
             }
         }
     }
-
-    // Sprawdzenie wygranej
 
     let win = true;
     for (let i = 0; i < 5; i++) {
